@@ -1,0 +1,5 @@
+admin
+gGFAAqNj4QmOLneW
+
+Mongo URL
+mongodb+srv://admin:gGFAAqNj4QmOLneW@cluster0.98n6c.mongodb.net/cafe
