@@ -20,13 +20,13 @@ app.get('/usuario', verificaToken, (req, res) => {
                 });
             }
             
-            Usuario.countDocuments({estado: true}, (err, conteo) => {
+            Usuario.countDocuments({ estado: true }, (err, conteo) => {
                 res.json({
                     ok: true,
                     usuarios,
-                    conteo
+                    conteo,
                 });
-            })
+            });
         })
 });
 
@@ -90,16 +90,7 @@ app.delete('/usuario/:id', [verificaToken, verificaADMIN_ROL], (req, res) => {
                 err,
             });
         }
-
-/*         if (!usuarioBorrado ) {
-            return res.status(400).json({
-                ok: false,
-                err: {
-                    message: 'Usuario no encontrado'
-                },
-            });
-        }
- */
+        
         res.json({
             ok: true,
             usuario: usuarioBorrado
